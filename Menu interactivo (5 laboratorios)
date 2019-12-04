@@ -1,0 +1,52 @@
+#!/bin/bash
+
+vis(){
+
+echo
+echo    Menu Interactivo
+echo
+echo    1.-lab1
+echo
+echo    2.-lab2
+echo
+echo    3.-lab3
+echo
+echo    4.-lab4
+echo
+echo    5.-lab5
+echo
+echo    6.-salida
+echo
+echo
+echo
+
+
+}
+        echo "Bienvenido Inge, Ingrese su nombre: "
+        read nombre
+
+        echo "Hola inge $nombre"
+
+        editor=vim
+        passwd=/etc/passwd
+        red='\033[0;41;30m'
+        std='\033[0;0;39m'
+
+
+        while true
+
+        do
+
+        vis
+        echo "Seleccione el numero de script que desea ejecutar"
+        read n
+        case $n in
+
+        1)cd /home/leonardo/laboratorios && ./lab1.sh && sleep 2 && clear;;
+        2)cd /home/leonardo/laboratorios && ./lab2.sh && sleep 2 && clear;;
+        3)cd /home/leonardo/laboratorios && ./lab3.sh && sleep 2 && clear;;
+        4)cd /home/leonardo/laboratorios && ./lab4.sh && sleep 2 && clear;;
+        5)cd /home/leonardo/laboratorios && ./lab5.sh && sleep 2 && clear;;
+
+        esac
+        done
